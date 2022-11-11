@@ -21,7 +21,7 @@ if (0 < mysqli_num_rows($result) ) {
            <td>" . $array['isbn'] . "</td>
             <td><img class='img-thumbnail img-fluid' src='pictures/". $array['image'] ."' width=100px height=100px</td>
            <td><a href='update.php?id=" . $array['id'] . "'class='button'><button class='btn btn-outline-primary btn-sm' type='button'>Edit ✐</button></a>
-           <a href='delete.php?id=" . $array['id'] . "'class='button'><button class='btn btn-danger btn-sm mt-2' type='button'>Delete</button></a></td>
+           <a href='delete.php?id=" . $array['id'] . "'class='button'><button class='btn btn-outline-danger btn-sm mt-2' type='button'>Delete</button></a></td>
             </tr>
 ";
     }

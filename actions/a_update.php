@@ -32,7 +32,7 @@ else {
     header("location: ../error.php");
 };
 ?>
-!
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -43,13 +43,13 @@ else {
     <body>
         <div class="container">
             <div class="mt-3 mb-3">
-                <h1>Update request response</h1>
+                <h1><?=$message?></h1>
             </div>
             <div class="alert alert-<?= $class;?>" role="alert">
-                <p><?=$message?></p>
+              
                 <p><?=$uploadError?></p>
-                <a href='../update.php?id=<?=$id;?>'><button class="btn btn-warning" type='button'>Back</button></a>
-                <a href='../index.php'><button class="btn btn-success" type='button'>Home</button></a>
+                <a href='../update.php?id=<?=$id;?>'><button class="btn btn-outline-secondary" type='button'>Back</button></a>
+                <a href='../index.php'><button class="btn btn-outline-primary" type='button'>Home</button></a>
             </div>
         </div>
     </body>
