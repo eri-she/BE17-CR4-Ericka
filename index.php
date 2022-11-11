@@ -19,7 +19,7 @@ if (0 < mysqli_num_rows($result) ) {
            <td>" . $array['author'] . "</td>
            <td>" . $array['publisher'] . "</td>
            <td>" . $array['isbn'] . "</td>
-            <td><img class='img-thumbnail' src='pictures/". $array['image'] ."' width=100px</td>
+            <td><img class='img-thumbnail img-fluid' src='pictures/". $array['image'] ."' width=100px height=100px</td>
            <td><a href='update.php?id=" . $array['id'] . "'class='button'><button class='btn btn-outline-primary btn-sm' type='button'>Edit ✐</button></a>
            <a href='delete.php?id=" . $array['id'] . "'class='button'><button class='btn btn-danger btn-sm mt-2' type='button'>Delete</button></a></td>
             </tr>
@@ -51,12 +51,13 @@ letter-spacing:2px;
    .button {
     text-decoration:none;
    }
+  
   </style>
 </head>
 <body>
     <div class="text-center bg-light pt-4 pb-4"><h1 class="title text-secondary">LIBRARY 📚</h1></div>
       <a href= "create.php" class="button"><button class='btn btn-outline-primary shadow mt-3'type="button" >Add a New Book</button></a>
-    <table class="table container mt-5">
+    <table class="table container mt-5 text-center">
   <thead>
     <tr>
    
@@ -71,11 +72,7 @@ letter-spacing:2px;
   <tbody>
     <tr>
      <?=$tbody?>
-      <!-- <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-       <td>@mdo</td>
-        <td>@mdo</td> -->
+     
     </tr>
  
    
