@@ -21,7 +21,7 @@ if (0 < mysqli_num_rows($result) ) {
            <td>" . $array['isbn'] . "</td>
             <td><img class='img-thumbnail img-fluid' src='pictures/". $array['image'] ."' width=100px height=100px</td>
            <td><a href='update.php?id=" . $array['id'] . "'class='button'><button class='btn btn-outline-primary btn-sm' type='button'>Edit ✐</button></a>
-           <a href='delete.php?id=" . $array['id'] . "'class='button'><button class='btn btn-outline-danger btn-sm mt-2' type='button'>Delete</button></a></td>
+           <a href='delete.php?id=" . $array['id'] . "'class='button'><button class='btn btn-outline-danger btn-sm mt-3' type='button'>Delete</button></a></td>
             </tr>
 ";
     }
@@ -51,13 +51,24 @@ letter-spacing:2px;
    .button {
     text-decoration:none;
    }
-  
+  .up a{
+     color: black;
+    text-decoration: none;
+    background-color: #B9E0FF;
+    opacity: 0.8;
+    display: inline-block;
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    padding: 10px 15px;
+    border-radius: 50% 0 0 0;
+  }
   </style>
 </head>
 <body>
     <div class="text-center bg-light pt-4 pb-4"><h1 class="title text-secondary">LIBRARY 📚</h1></div>
-      <a href= "create.php" class="button"><button class='btn btn-outline-primary shadow mt-3'type="button" >Add a New Book</button></a>
-    <table class="table container mt-5 text-center">
+      <a href= "create.php" class="button"><button class='btn btn-outline-primary mt-3'type="button" >Add a New Book</button></a>
+    <table class="table table-light shadow container mt-5 text-center">
   <thead>
     <tr>
    
@@ -78,5 +89,6 @@ letter-spacing:2px;
    
   </tbody>
 </table>
+ <div class="up shadow"><a href="">⇡</a></div>
 </body>
 </html>
