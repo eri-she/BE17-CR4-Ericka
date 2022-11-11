@@ -13,12 +13,12 @@ if ($_POST) {
    
     $sql = "INSERT INTO books (title, author, publisher, isbn, image) VALUES ('$title', '$author', '$publisher','$isbn','$picture->fileName')";
 
-    if (mysqli_query($conn, $sql) === true) {
+    if (mysqli_query($conn, $sql) === true ) {
         $class = "success";
-        $message = "The entry below was successfully created <br>
-            <table class='table w-50'><tr>
-            <td> $name </td>
-            <td> $price </td>
+        $message = "<h2>Your book has been successfully added! 📕 </h2> <br>
+            <table class='table w-50 text-center'><tr>
+            <td>Title: $title  </td>
+            <td>From: $author </td>
             </tr></table><hr>";
         $uploadError = ($picture->error !=0)? $picture->ErrorMessage :'';
     } else {
